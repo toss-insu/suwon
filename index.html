@@ -41,13 +41,53 @@
       height: 100%;
       border: 0;
     }
+
+    /* 하단 중앙 고정 버튼 */
+    .floating-apply {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+    }
+    
+    .floating-apply a {
+      background: #0052ff;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* 오른쪽 하단 카카오톡 버튼 */
+    .kakao-btn {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #fee500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+    
+    .kakao-btn img {
+      width: 28px;
+      height: 28px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="./img/toss_1.png" alt="toss_1">
-    
-    <!-- 첫 번째 영상 (1과 2 사이) -->
+
     <div class="video-wrapper">
       <iframe src="https://www.youtube.com/embed/E6Z8VTHDNRg" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -58,7 +98,7 @@
     <img src="/seoul/img/toss_5.png" alt="toss_5">
     <img src="/seoul/img/toss_6.gif" alt="toss_6">
 
-    <!-- 두 번째 영상 (6과 7 사이) -->
+
     <div class="video-wrapper">
       <iframe src="https://www.youtube.com/embed/2Csv_gxtpFA" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -69,7 +109,16 @@
     <img src="/seoul/img/toss_10.gif" alt="toss_10">
     <img src="/seoul/img/toss_11.gif" alt="toss_11">
     <img src="/seoul/img/toss_12.png" alt="toss_12">
-    <img src="/seoul/img/toss_13_seoul.png" alt="toss_13_seoul">
+    <img style="margin-bottom:50px;" src="/seoul/img/toss_13_seoul.png" alt="toss_13_seoul">
   </div>
+  <!-- 하단 중앙: 지원하기 버튼 -->
+  <div class="floating-apply">
+    <a href="https://tossinsu.com/apply/6327174003" target="_blank">서울 직영 1차지원서 작성→</a>
+  </div>
+  
+  <!-- 우측 하단: 카카오톡 버튼 -->
+  <a href="https://pf.kakao.com/_rLxhhn/chat" target="_blank" class="kakao-btn" title="채용 문의하기">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/KakaoTalk_logo.svg/1024px-KakaoTalk_logo.svg.png" alt="KakaoTalk" />
+  </a>
 </body>
 </html>
