@@ -61,12 +61,33 @@
       text-decoration: none;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     }
-    
-    /* 오른쪽 하단 카카오톡 버튼 */
-    .kakao-btn {
+        
+    /* 전체 카카오톡 고정 블록 */
+    .kakao-wrapper {
       position: fixed;
       bottom: 100px;
       right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 999;
+    }
+    
+    /* 말풍선 텍스트 스타일 */
+    .kakao-label {
+      background-color: #fee500;
+      color: #000;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      white-space: nowrap;
+    }
+    
+    /* 아이콘 버튼 */
+    .kakao-btn {
       width: 56px;
       height: 56px;
       border-radius: 50%;
@@ -75,7 +96,6 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-      z-index: 999;
     }
     
     .kakao-btn img {
@@ -118,8 +138,11 @@
   </div>
   
   <!-- 우측 하단: 카카오톡 버튼 -->
-  <a href="https://pf.kakao.com/_rLxhhn/chat" target="_blank" class="kakao-btn" title="채용 문의하기">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/KakaoTalk_logo.svg/1024px-KakaoTalk_logo.svg.png" alt="KakaoTalk" />
-  </a>
+  <div class="kakao-wrapper">
+    <div class="kakao-label">채용 문의하기</div>
+    <a href="https://pf.kakao.com/_rLxhhn/chat" target="_blank" class="kakao-btn" title="카카오톡 채팅 열기">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/KakaoTalk_logo.svg/1024px-KakaoTalk_logo.svg.png" alt="KakaoTalk" />
+    </a>
+  </div>
 </body>
 </html>
